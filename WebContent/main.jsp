@@ -37,7 +37,7 @@
                <li><a href="bbs.jsp">게시판</a></li>
              </ul>
              <%
-              if (userID==null){
+              if (userID == null){
             	%>  
               <ul class="nav navbar-nav navbar-right">
                <li class="dropdown">

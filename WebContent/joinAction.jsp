@@ -20,18 +20,27 @@
 	
 	
 	<%
-	String userID =null;
-	  if (session.getAttribute("userID") !=null){
-		  userID = (String) session.getAttribute("userID");
-	  }
-	  if (userID !=null){
-		  PrintWriter script = response.getWriter();
-	    	script.println("<script>");
-	    	script.println("alert('이미로그인이되어있습니다.');");
-	    	script.println("location.href ='main.jsp'");
-	    	script.println("</script>");
-		  
-	  }
+	String userID = null;
+
+	if(session.getAttribute("userID") != null ){
+
+		userID = (String) session.getAttribute("userID");
+
+	}
+
+	if(userID != null){
+
+		PrintWriter script = response.getWriter();
+
+		script.println("<script>");
+
+		script.println("alert('이미 로그인 되어있습니다.')");
+
+		script.println("location.href = 'main.jsp'");
+
+		script.println("</script>");	
+
+	}
 		if (user.getUserID()==null ||user.getUserPassword()==null ||user.getUserName()==null
 		||user.getUserGender()==null || user.getUserEmail()==null){
 			PrintWriter script = response.getWriter();
