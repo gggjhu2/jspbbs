@@ -8,7 +8,7 @@
 <jsp:setProperty name="bbs" property="bbsContent"/>
 
 <!DOCTYPE html >
-<html>
+<html> 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>게시판 웹 사이트</title>
