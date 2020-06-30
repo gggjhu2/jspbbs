@@ -3,6 +3,7 @@
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="bbs.Bbs" %>
 <%@ page import="bbs.bbsDAO" %>
+
 <!DOCTYPE html >
 <html>
 <head>
@@ -20,19 +21,17 @@
  		 userID =(String) session.getAttribute("userID");
  		 
  	 }
- 	 //매개 변수및 기본설정 세팅 코딩
- 	  int bbsID = 0;
- 	  if (request.getParameter("bbsID") != null){
- 		  bbsID =Integer.parseInt(request.getParameter("bbsID"));
- 	  }
- 	  if (bbsID==0){
- 		    PrintWriter script = response.getWriter();
+ 	 int bbsID = 0;
+ 	 if (request.getParameter("bbsID") !=null){
+ 	 }
+ 	 if (bbsID == 0 ){
+ 		  PrintWriter script = response.getWriter();
 	    	script.println("<script>");
-	    	script.println("alert('유효하지않는 글입니다.');");
+	    	script.println("alert('유효하지않은글입니다.');");
 	    	script.println("location.href ='bbs.jsp'");
 	    	script.println("</script>");
- 	  }
- 	  Bbs bbs = new bbsDAO().getBbs(bbsID);
+ 	 }
+ 	 Bbs bbs =new bbsDAO().getBbs(bbsID);
  	%>
       <nav class="navbar navbar-default">
        <div class="navbar-header">
@@ -88,7 +87,6 @@
             
          </div>
       </nav>
-      
        <div class="container">
         <div class="row">
           <table class="table table-striped" style="text-align:center; border: 1px solid #dddddd">
@@ -100,36 +98,32 @@
            </thead>
             <tbody>
               <tr>
-                <td><input type="text" class="form-control" placeholder="글제목" name="bbsTitle" maxlength="50"> </td>
+                <td style="width: 20%;"> 글제목</td>
+                <td colspan ="2"><%= bbs.getBbsTitle() %></td>
+                </tr>
+                 <tr>
+                <td> 작성자</td>
+                <td colspan ="2"><%= bbs.getUserID() %></td>
                 </tr>
                 <tr>
-				<td style ="width 20%;">글 제목 </td>            
-				<td colspan ="2"><%= bbs.getBbsTitle() %> </td>            
+  				<td> 작성일자</td>
+                <td colspan ="2"><%= bbs.getBbsDate().substring(0,11)+bbs.getBbsDate().substring(11,13) +"시"+ bbs.getBbsDate().substring(14,16)+"분" %></td>
               </tr>
-              <tr>
-  				<td>작성자</td>            
-				<td colspan ="2"><%= bbs.getUserID() %> </td>
-              </tr>
-              <tr>
-                <td>작성 일자</td>            
-				<td colspan ="2"><%= bbs.getBbsDate().substring(0,11)+bbs.getBbsDate().substring(11,13) +"시"+ bbs.getBbsDate().substring(14,16)+"분" %> </td>
-              </tr>            
-			<tr>
-  				<td>내용</td>            
-				<td colspan ="2" style ="min-height: 200px; text-align:left;"><%= bbs.getBbsContent() %></td>
-            </tr>
+                 <tr>
+                <td> 내용</td>
+                <td colspan ="2" style="min-height: 200ox; text-align: left;"><%= bbs.getBbsContent() %></td>
+                </tr>
             </tbody>
             </table>
-             <a href="bbs.jsp" class="btn btn-primary">목록</a>
-             <%
-              if(userID != null && userID.equals(bbs.getUserID())){
-            	  %>
-            	  <a href="update.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">수정</a>
-            	  <a href="deleteAction.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">삭제</a>
-              <%
-              }
-              
-             %>
+            	<a href ="bbs.jsp" class= "btn btn-primary">목록</a>
+            	<%
+            	 if (userID !=null  && userID.equals(bbs.getUserID())){
+            	%>
+            	 <a href="update.jsp?bbsID=<%= bbsID  %>" class= "btn btn-primary">수정</a>
+            	 <a href="delateAction.jsp?bbsID=<%= bbsID  %>" class= "btn btn-primary">삭제</a>
+            	<%
+            	 }
+            	%>
             <input type="submit"  class="btn btn-primary pull-right" value="글쓰기"> 
        		</div>
        	</div>	

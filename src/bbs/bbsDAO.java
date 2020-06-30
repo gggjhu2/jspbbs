@@ -8,8 +8,7 @@ import java.util.ArrayList;
 
 public class bbsDAO {
 
-	
-
+	// 티님 보이시나요~~ t:yes
 	private Connection conn;
 	private ResultSet rs;
 	//mysql 접속 명령 코딩
