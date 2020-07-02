@@ -8,6 +8,7 @@ public class Bbs {
 	private String bbsDate;
 	private String bbsContent;
 	private int bbsAvailable;
+	
 	public int getBbsID() {
 		return bbsID;
 	}

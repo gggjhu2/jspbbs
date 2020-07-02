@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="bbs.Bbs" %>
-<%@ page import="bbs.bbsDAO" %>
+<%@ page import="bbs.BbsDAO" %>
 
 <!DOCTYPE html >
 <html>
@@ -23,15 +23,19 @@
  	 }
  	 int bbsID = 0;
  	 if (request.getParameter("bbsID") !=null){
- 	 }
+ 		// 리퀘스트 겟파라미터  관련 호출 
+ 		 bbsID= Integer.parseInt(request.getParameter("bbsID"));
+ 	}
+ 	 
  	 if (bbsID == 0 ){
+ 		 
  		  PrintWriter script = response.getWriter();
 	    	script.println("<script>");
 	    	script.println("alert('유효하지않은글입니다.');");
 	    	script.println("location.href ='bbs.jsp'");
 	    	script.println("</script>");
  	 }
- 	 Bbs bbs =new bbsDAO().getBbs(bbsID);
+ 	 Bbs bbs =new BbsDAO().getBbs(bbsID);
  	%>
       <nav class="navbar navbar-default">
        <div class="navbar-header">

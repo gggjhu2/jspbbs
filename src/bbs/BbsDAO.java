@@ -6,13 +6,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-public class bbsDAO {
+public class BbsDAO {
 
 	// 티님 보이시나요~~ t:yes
 	private Connection conn;
 	private ResultSet rs;
 	//mysql 접속 명령 코딩
-	public bbsDAO(){
+	public BbsDAO(){
 		try{
 			String dbURL = "jdbc:mysql://localhost:3306/BBS?characterEncoding=UTF-8&serverTimezone=UTC";
 			   String dbID = "root";
@@ -23,6 +23,7 @@ public class bbsDAO {
 			e.printStackTrace();
 }
 	}
+	//날짜 데이타베이스 호출
 		public String getDate(){
 			String SQL ="SELECT NOW()";
 			try{
@@ -37,8 +38,11 @@ public class bbsDAO {
 			return "";//데이터베이스오류
 		}
 		
+		
 		public int getNext(){
+			//내림차순 글 호출
 			String SQL ="SELECT bbsID FROM BBS ORDER BY bbsID DESC";
+			
 			try{
 				 PreparedStatement pstmt=conn.prepareStatement(SQL);
 				 rs=pstmt.executeQuery();
@@ -122,7 +126,6 @@ public class bbsDAO {
 				 bbs.setBbsDate(rs.getString(4));
 				 bbs.setBbsContent(rs.getString(5));
 				 bbs.setBbsAvailable(rs.getInt(6));
-				
 				 return bbs;
 			}
 		}catch(Exception e){

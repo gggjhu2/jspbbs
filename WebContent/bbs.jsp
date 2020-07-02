@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.io.PrintWriter" %>
-<%@ page import="bbs.bbsDAO" %>
+<%@ page import="bbs.BbsDAO" %>
 <%@ page import="bbs.Bbs" %>
 <%@ page import= "java.util.ArrayList" %>
 <!DOCTYPE html >
@@ -28,7 +28,7 @@
  		 
  	 }
  	 int pageNumber = 1;
- 	 if (request.getParameter("pageNumber") !=null){
+ 	 if (request.getParameter("pageNumber") != null){
  		 pageNumber =Integer.parseInt(request.getParameter("pageNumber"));
  	 }
  	%>
@@ -100,7 +100,7 @@
             <tbody>
               <tr>
             <%
-              bbsDAO bbsDAO = new bbsDAO();
+              BbsDAO bbsDAO = new BbsDAO();
               ArrayList<Bbs> list = bbsDAO.getList(pageNumber);
               for(int i = 0; i <list.size(); i++) {
             %>
