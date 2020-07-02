@@ -23,8 +23,9 @@
  	 }
  	 int bbsID = 0;
  	 if (request.getParameter("bbsID") !=null){
- 		// 리퀘스트 겟파라미터  관련 호출 
+ 		// 리퀘스트 겟파라미터  관련 호출 해당문제 스터디
  		 bbsID= Integer.parseInt(request.getParameter("bbsID"));
+ 		
  	}
  	 
  	 if (bbsID == 0 ){
