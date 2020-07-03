@@ -104,7 +104,7 @@
             <tbody>
               <tr>
                 <td style="width: 20%;"> 글제목</td>
-                <td colspan ="2"><%= bbs.getBbsTitle() %></td>
+                <td colspan ="2"><%= bbs.getBbsTitle().replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll("\n","<br>") %></td>
                 </tr>
                  <tr>
                 <td> 작성자</td>
@@ -116,8 +116,9 @@
               </tr>
                  <tr>
                 <td> 내용</td>
-                <td colspan ="2" style="min-height: 200ox; text-align: left;"><%= bbs.getBbsContent() %></td>
+                <td colspan ="2" style="min-height: 200ox; text-align: left;"><%= bbs.getBbsContent().replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll("\n","<br>") %></td>
                 </tr>
+       
             </tbody>
             </table>
             	<a href ="bbs.jsp" class= "btn btn-primary">목록</a>
