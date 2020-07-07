@@ -119,7 +119,7 @@
                 <td colspan ="2" style="min-height: 200ox; text-align: left;"><%= bbs.getBbsContent().replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll("\n","<br>") %></td>
                 </tr>
        
-            </tbody>
+            </tbody> 
             </table>
             	<a href ="bbs.jsp" class= "btn btn-primary">목록</a>
             	<%
