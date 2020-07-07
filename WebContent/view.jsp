@@ -53,7 +53,7 @@
          <div class="callapse navbar-collapse" id="bs-examle-navbar-callapse-1">
            <ul class="nav navbar-nav">
                <li ><a href="main.jsp">메인</a></li>
-              <li class="active"><a href="bbs.jsp">게시판</a></li>
+              <li class="active"><a href="bbs.jsp">게시판</a></li> 
              </ul>
              <%
               if (userID==null){
