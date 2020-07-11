@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothing.css);
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+*{
+	font-family : 'Nanum Gothing' ;
+	
+}
+ h1 {
+  	font-family : 'Hanna';
+ }

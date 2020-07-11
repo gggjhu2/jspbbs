@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.io.PrintWriter" %>
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name ="viewport" content ="width=device-width, initial-scale=1">
+<meta name ="viewport" content="width=device-width, initial-scale=1">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
 <link href="./css/custom.css" rel="stylesheet">
 
@@ -73,7 +73,50 @@
             
          </div>
       </nav>
-     
+      <div class="container">
+       <div class ="jumbotron">
+         <div class="container">
+           <h1 style="text-align:center"> 웹 사이트 소개</h1>
+           <p>이웹 싸이트는 부트스트랩과 최소한의 로직만을이용하여 개발하였습니다.
+             mysql 사용 하여 데이터베이스 연동하여 회원가입 로그인 글수정 삭제 게시판 글쓰기든을 구현하였습니다.
+             
+             <br></p>
+             <p style="text-align:center"><a class="btn btn-primary btn-pull" href="#" role="button" >자세히알아보기</a></p>
+             
+       		
+         </div>
+       </div>
+      </div>
+      <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        	 
+       		<div class="carousel-inner">
+       		  <div class="item active">
+       		    <img style="width:500px">
+       		    <img src="images/1.jpg">
+       		 </div>
+       		 <div class="item" >
+       		    <img style="width:500px">
+       		    <img src="images/2.gif">
+       		 </div>
+       		 <div class="item">
+       		    <img style="width:500px">
+       		    <img src="images/3.png">
+       		 </div>
+       		 <div class="item">
+       		    <img style="width:500px">
+       		    <img src="images/4.jpg">
+       		 </div>
+       		</div>
+       		<a class ="left carousel-control" href="#myCarousel" data-slide="prev">
+       		   <span class ="glyphcglyphicon-chevron-left"></span>
+       		</a> 
+       		<a class ="right carousel-control" href="#myCarousel" data-slide="next">
+       		   <span class ="glyphicon-chevron-right"></span>
+       		</a> 
+	     
+        </div>
+      </div>
           
       
        

@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class UserDAO {
 
@@ -44,6 +45,29 @@ public class UserDAO {
 			}catch(Exception e) {
 			e.printStackTrace();
 		}
+//		**자바자원 반납  **코딩 명령어 (스프링에서는 닫는태그를 하지않는다 =이유는 di로 알아서 해준다)
+		finally{
+			if (rs !=null ){
+				try {
+					rs.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			
+				if (pstmt !=null){
+					try {
+						pstmt.close();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			}
+					
+		}
+ //  위 상단 해당부분에대하여 나중에 공부할것 	
+		
 		return -2;//데이터베이스오류
 	}
 	
