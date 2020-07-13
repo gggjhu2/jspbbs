@@ -253,7 +253,8 @@ th {
   }
   .table td,
   .table th {
-    background-color: #fff !important;
+    background-color: #fff !important; 
+    
   }
   .table-bordered th,
   .table-bordered td {
@@ -1086,7 +1087,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+ background: #3f2f2d;
 }
 input,
 button,
@@ -1373,7 +1374,9 @@ a.text-danger:focus {
 }
 .bg-primary {
   color: #fff;
-  background-color: #337ab7;
+  
+  /*background-color: #337ab7;*/
+  background-color: #3B0B2E;
 }
 a.bg-primary:hover,
 a.bg-primary:focus {
@@ -6748,10 +6751,10 @@ button.close {
   .visible-print-inline-block {
     display: inline-block !important;
   }
-}
+}/* 
 @media print {
   .hidden-print {
     display: none !important;
   }
-}
+} */
 /*# sourceMappingURL=bootstrap.css.map */

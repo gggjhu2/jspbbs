@@ -1,0 +1,101 @@
+@CHARSET "UTF-8";
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #FFDAB9;
+	margin: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+
+
+/* input[id="menuicon"] {display:none;}
+
+헤더
+
+header {width:100%;background:#e5e5e5;}
+header > div {position:relative; width:12000px;margin:0 auto;}
+header > div ul.navi {font-size:0;}
+header > div ul.navi > li {font-size: 12px;display:inline-block; vertical-align:middle;}
+header > div ul.navi > li > a {display:block; width:aito; padding:20px;} 
+header > div ul.navi > li.logo > a{padding:20px 50px; font-size:20px; font-weight:900%;}
+
+각 영역의 라벨9중앙정렬)
+
+.area_desc {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);font-size:20px;}
+ 
+ 메뉴버튼
+ .menubtn {display:block; width:50px; height:50px; position:absolute; top:50%; right:10px; transform:translatey (-50%);cursor:pointer;}
+ .menubtn span{display:block; potiton:absolute; width:80%;height:5px;border-radius:30px;background: #222;transition:all .35s; }
+ .menubtn span:nth-child(1){top:20%;left:50%;transform:translateX(-50%);}
+ .menubtn span:nth-child(2){top:50%;left:50%;transform:translate(-50%,-50%);}
+ .menubtn span:nth-child(3){bottom:20%;left:50%;transform:translate(-50%);}
+
+컨텐츠 영역
+
+.container {width: 100%; position: relative;}
+.container .contents {width: 1200px;margin: 0 auto; min-height: 700px; border:1px solid #eee; background: #f1f1f1;}
+.container .sidbar {position: fixed;top:0;right:-300px;width: 300px; height: 100%; background: #666;border:1px solid #eee;z-index:30;transition:.35s;} */

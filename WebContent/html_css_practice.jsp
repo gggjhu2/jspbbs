@@ -3,22 +3,37 @@
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="bbs.BbsDAO" %>
 <%@ page import="bbs.Bbs" %>
+<%@ page import="java.util.ArrayList" %>
+
 <!DOCTYPE html >
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name ="viewport" content ="width=device-width, initial-scale=1">
+<meta name ="viewport" content="width=device-width, initial-scale=1">
+<link href="./css/practice_css.css" rel="stylesheet" type="text/css">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
 <link href="./css/custom.css" rel="stylesheet">
 
+
 <title>게시판 웹 사이트</title>
+<style type="text/css">
+ a, a:hover{
+ color:#000000;
+ text-decoration : none;
+ }
+</style> 
 </head>
 <body>
+ 	
  	<%
  	  String  userID =null;
  	 if (session.getAttribute("userID") !=null){
  		 userID =(String) session.getAttribute("userID");
  		 
+ 	 }
+ 	 int pageNumber = 1;
+ 	 if (request.getParameter("pageNumber") != null){
+ 		 pageNumber =Integer.parseInt(request.getParameter("pageNumber"));
  	 }
  	%>
       <nav class="navbar navbar-default">
@@ -36,8 +51,8 @@
          <div class="callapse navbar-collapse" id="bs-examle-navbar-callapse-1">
            <ul class="nav navbar-nav">
                <li ><a href="main.jsp">메인</a></li>
-              <li class="active"><a href="bbs.jsp">게시판</a></li>
-                  <li><a href="html_css_practice.jsp">CSS/HTML연습장</a></li>
+              <li ><a href="bbs.jsp">게시판</a></li>
+                  <li class="active"><a href="html_css_practice.jsp">CSS/HTML연습장</a></li>
              </ul>
              <%
               if (userID==null){
@@ -76,31 +91,8 @@
             
          </div>
       </nav>
-       <div class="container">
-        <div class="row">
-         <form method="post" action="writeAction.jsp">
-          <table class="table table-striped" style="text-align:center; border: 1px solid #dddddd">
-           <thead>
-            <tr>
-              <th colspan="2" style="background-color:#eeeeee; text-align:center;">게시판 글쓰기 양식</th>
-             
-            </tr>
-           </thead>
-            <tbody>
-              <tr>
-                <td><input type="text" class="form-control" placeholder="글제목" name="bbsTitle" maxlength="50"> </td>
-                </tr>
-                <tr>
-                <td><textarea class="form-control" placeholder="글내용" name="bbsContent" maxlength="2048" style="height:350px;"> </textarea> </td>
-              </tr>
-            </tbody>
-            </table>
-            <input type="submit"  class="btn btn-primary pull-right" value="글쓰기"> 
-         </form>
-       		</div>
-       	</div>	
-       	
        
+       <p style="text-align:center"><a class="btn btn-primary btn-pull" href="../htmlpractice.jsp" role="button" >연습장 키기</a></p> 
           
       
        

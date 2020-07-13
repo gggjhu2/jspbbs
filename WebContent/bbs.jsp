@@ -10,8 +10,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name ="viewport" content ="width=device-width, initial-scale=1">
+<link href="./css/practice_css.css" rel="stylesheet">
 <link href="./css/bootstrap.min.css" rel="stylesheet">  
 <link href="./css/custom.css" rel="stylesheet"> 
+
 
 <title>게시판 웹 사이트</title>
 <style type="text/css">
@@ -48,7 +50,8 @@
          <div class="callapse navbar-collapse" id="bs-examle-navbar-callapse-1">
            <ul class="nav navbar-nav">
                <li ><a href="main.jsp">메인</a></li>
-              <li class="active">><a href="bbs.jsp">게시판</a></li>
+              <li class="active"><a href="bbs.jsp">게시판</a></li>
+                  <li><a href="html_css_practice.jsp">CSS/HTML연습장</a></li>
              </ul>
              <%
               if (userID==null){
@@ -89,7 +92,7 @@
       </nav>
        <div class="container">
         <div class="row">
-          <table class="table table-striped" style="text-align:center; border: 1px solid #dddddd">
+          <table class="table table-striped" style="text-align:center; border: 9px solid #050505">
            <thead>
             <tr>
               <th style="background-color:#eeeeee; text-align:center;">번호</th>

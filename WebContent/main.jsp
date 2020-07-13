@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name ="viewport" content="width=device-width, initial-scale=1">
+<link href="./css/practice_css.css" rel="stylesheet" type="text/css">
 <link href="./css/bootstrap.min.css" rel="stylesheet">
 <link href="./css/custom.css" rel="stylesheet">
 
@@ -27,6 +28,7 @@
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
           </button>
            <a class="navbar-brand" href="main.jsp">
            JSP게시판 웹 사이트</a>
@@ -35,6 +37,7 @@
            <ul class="nav navbar-nav">
                <li class="active"><a href="main.jsp">메인</a></li>
                <li><a href="bbs.jsp">게시판</a></li>
+               <li><a href="html_css_practice.jsp">CSS/HTML연습장</a></li>
              </ul>
              <%
               if (userID == null){
